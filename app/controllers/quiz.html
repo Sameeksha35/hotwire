@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rails Practice Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .hidden-answer {
+      display: none;
+      margin-top: 10px;
+      color: green;
+    }
+    .btn {
+      margin-top: 10px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rails Practice Quiz</h1>
+
+  <div class="question">
+    <p><strong>1. What command generates a new Rails application?</strong></p>
+    <input type="text" placeholder="Your answer here" id="q1" />
+    <button class="btn" onclick="showAnswer('a1')">Show Answer</button>
+    <p class="hidden-answer" id="a1">Answer: <code>rails new app_name</code></p>
+  </div>
+
+  <div class="question">
+    <p><strong>2. What file is used to configure database settings in a Rails application?</strong></p>
+    <input type="text" placeholder="Your answer here" id="q2" />
+    <button class="btn" onclick="showAnswer('a2')">Show Answer</button>
+    <p class="hidden-answer" id="a2">Answer: <code>config/database.yml</code></p>
+  </div>
+
+  <div class="question">
+    <p><strong>3. How do you start the Rails server?</strong></p>
+    <input type="text" placeholder="Your answer here" id="q3" />
+    <button class="btn" onclick="showAnswer('a3')">Show Answer</button>
+    <p class="hidden-answer" id="a3">Answer: <code>rails server</code> or <code>rails s</code></p>
+  </div>
+
+  <div class="question">
+    <p><strong>4. Which command is used to generate a new model?</strong></p>
+    <input type="text" placeholder="Your answer here" id="q4" />
+    <button class="btn" onclick="showAnswer('a4')">Show Answer</button>
+    <p class="hidden-answer" id="a4">Answer: <code>rails generate model ModelName</code></p>
+  </div>
+
+  <div class="question">
+    <p><strong>5. How do you create and apply migrations?</strong></p>
+    <input type="text" placeholder="Your answer here" id="q5" />
+    <button class="btn" onclick="showAnswer('a5')">Show Answer</button>
+    <p class="hidden-answer" id="a5">Answer: <code>rails db:migrate</code> after generating migrations.</p>
+  </div>
+
+  <script>
+    function showAnswer(id) {
+      const answer = document.getElementById(id);
+      answer.style.display = "block";
+    }
+  </script>
+</body>
+</html>
